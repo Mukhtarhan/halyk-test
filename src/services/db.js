@@ -1,0 +1,80 @@
+export const currencies = [
+  {
+    fullname: "АВСТРАЛИЙСКИЙ ДОЛЛАР",
+    title: "AUD",
+    description: "299.48",
+    flag: "aus.png",
+  },
+  {
+    fullname: "КИТАЙСКИЙ ЮАНЬ",
+    title: "AZN",
+    description: "264.54",
+    flag: "azr.png",
+  },
+  {
+    fullname: "АЗЕРБАЙДЖАНСКИЙ МАНАТ",
+    title: "KWD",
+    description: "10.7",
+    flag: "us.png",
+  },
+  {
+    fullname: "АРМЯНСКИЙ ДРАМ",
+    title: "AMD",
+    description: "11.57",
+    flag: "arm.png",
+  },
+  {
+    fullname: "БЕЛОРУССКИЙ РУБЛЬ",
+    title: "BYN",
+    description: "178.07",
+    flag: "blr.png",
+  },
+  {
+    fullname: "БРАЗИЛЬСКИЙ РЕАЛ",
+    title: "BRL",
+    description: "86.8",
+    flag: "bzr.png",
+  },
+  {
+    fullname: "ИРАНСКИЙ РИАЛ",
+    title: "IRR",
+    description: "10.7",
+    flag: "irn.png",
+  },
+  {
+    fullname: "ВЕНГЕРСКИХ ФОРИНТОВ",
+    title: "HUF",
+    description: "12.84",
+    flag: "hng.png",
+  },
+  {
+    fullname: "ДОЛЛАР США",
+    title: "USD",
+    description: "448.39",
+    flag: "us.png",
+  },
+  {
+    fullname: "КИТАЙСКИЙ ЮАНЬ",
+    title: "CNY",
+    description: "65.13",
+    flag: "cn.png",
+  },
+  {
+    fullname: "ЕВРО",
+    title: "EUR",
+    description: "486.91",
+    flag: "uk.png",
+  },
+  {
+    fullname: "РОССИЙСКИЙ РУБЛЬ",
+    title: "RUB",
+    description: "10.7",
+    flag: "rus.png",
+  },
+  {
+    fullname: "КЫРГЫЗСКИЙ СОМ",
+    title: "KGS",
+    description: "5.13",
+    flag: "kyr.png",
+  },
+];
