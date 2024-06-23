@@ -35,7 +35,7 @@
 import { ref, onMounted } from "vue";
 import CurrencyList from "../components/CurrencyList.vue";
 import { currencies } from "../services/db";
-const filteredCurrencies = ref();
+
 const todayDate = ref("");
 const onInput = ref("");
 
@@ -47,7 +47,7 @@ const setTodayDate = () => {
   todayDate.value = `${year}-${month}-${day}`;
 };
 
-onMounted(async () => {
+onMounted(() => {
   setTodayDate();
 });
 </script>
