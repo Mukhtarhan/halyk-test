@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="content">
-      <h1 class="logo" @click="goHome">Halyk</h1>
+      <h1 class="logo" @click="goHome">Home</h1>
       <svg
         class="heart"
         xmlns="http://www.w3.org/2000/svg"

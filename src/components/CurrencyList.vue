@@ -83,7 +83,7 @@ function nextPage() {
 }
 .list {
   display: grid;
-  margin-top: 40px;
+  margin-top: 10px;
   grid-template-columns: auto auto;
   gap: 20px;
 }

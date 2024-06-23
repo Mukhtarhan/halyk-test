@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <p class="desc">{{ currency.description }} KZT</p>
+    <p class="desc">{{ currency.description }}</p>
     <svg
       class="heart"
       xmlns="http://www.w3.org/2000/svg"
@@ -66,6 +66,7 @@ function toggleFavourite() {
 }
 .name {
   display: flex;
+  width: 400px;
   justify-content: center;
   flex-direction: column;
 }
@@ -76,6 +77,8 @@ function toggleFavourite() {
 .desc {
   font-size: 24px;
   font-weight: 700;
+  margin-right: 10px;
+  width: 15%;
 }
 .right {
   display: flex;

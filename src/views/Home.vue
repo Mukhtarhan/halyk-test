@@ -3,8 +3,8 @@
     <h2>Посмотреть курсы валют по дате</h2>
     <div class="home-filter">
       <div>
-        <input type="date" v-model="todayDate" />
-        <button type="submit">Применить</button>
+        <input type="date" v-model="date" />
+        <button type="submit" @click="applyDate">Применить</button>
       </div>
       <div class="search-block">
         <input
@@ -27,16 +27,18 @@
         </svg>
       </div>
     </div>
-    <CurrencyList :filter="onInput" :currencies="currencies" />
+    <h3>Курс на {{ date }}</h3>
+    <CurrencyList :filter="onInput" :currencies="store.currencies" />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import CurrencyList from "../components/CurrencyList.vue";
-import { currencies } from "../services/db";
+import { useCurrencyStore } from "../store/index";
 
-const todayDate = ref("");
+const store = useCurrencyStore();
+const date = ref("");
 const onInput = ref("");
 
 const setTodayDate = () => {
@@ -44,11 +46,19 @@ const setTodayDate = () => {
   const year = today.getFullYear();
   const month = String(today.getMonth() + 1).padStart(2, "0");
   const day = String(today.getDate()).padStart(2, "0");
-  todayDate.value = `${year}-${month}-${day}`;
+  date.value = `${year}-${month}-${day}`;
+};
+
+const applyDate = async () => {
+  const [year, month, day] = date.value.split("-");
+  const formattedDate = `${day}.${month}.${year}`;
+  store.fetchCurrencies(formattedDate);
+  console.log(store.currencies);
 };
 
 onMounted(() => {
   setTodayDate();
+  applyDate();
 });
 </script>
 
@@ -63,6 +73,10 @@ onMounted(() => {
   cursor: pointer;
 }
 
+h3 {
+  margin-top: 20px;
+  color: rgb(165, 165, 165);
+}
 .search:hover {
   opacity: 0.6;
 }
